@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 async def load_entity_list(domain_id):
     try:
         async with Session() as session:
-            sql = text(f"SELECT DOMAIN_ID, FILENAME, ENTITY, DATA FROM NLU_API_DICTIONARY WHERE DOMAIN_ID = '{domain_id}'")
+            sql = text(f"SELECT DOMAIN_ID, FILENAME, ENTITY, DATA FROM ____??____ WHERE DOMAIN_ID = '{domain_id}'")
             result = await session.execute(sql)
             rows = result.fetchall()
             domain_id  = [row.DOMAIN_ID for row in rows]
